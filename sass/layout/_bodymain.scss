@@ -1,0 +1,50 @@
+@use "../utility/reset";
+@use "../utility/grid";
+@use "../module/color";
+@use "../module/font";
+@use "../component/carousel";
+@use "../component/producdcard";
+@use "../component/why_choose_us";
+@use "../component/news";
+@use "../component/features_works";
+
+.main_wrap {
+  padding: 20px 40px 60px;
+  background-image: url(../images/subbg.gif);
+}
+h2 {
+  font-size: font.$h2_font_size;
+  margin-bottom: 15px;
+}
+.service_wrap {
+  margin-bottom: 20px;
+  @include grid.pad-lg {
+    margin-bottom: 0;
+  }
+}
+.service {
+  p,
+  a {
+    color: color.$gray0;
+  }
+  a:hover {
+    @extend %hover;
+  }
+}
+.welcome_img {
+  a {
+    display: inline-block;
+  }
+  img {
+    width: 100%;
+  }
+  img:hover {
+    filter: opacity(80%);
+  }
+}
+
+.line {
+  padding: 0.3px;
+  margin: 30px 0 20px;
+  background-color: color.$light_gray;
+}

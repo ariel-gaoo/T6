@@ -1,0 +1,40 @@
+@use "../utility/reset";
+@use "../module/color";
+
+.news {
+  display: flex;
+}
+
+.news:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.news_img {
+  flex: 1 1 0;
+  img {
+    width: 100%;
+  }
+}
+.news_text {
+  flex: 1 1 0;
+  margin-left: 12px;
+  time {
+    color: color.$light_gray0;
+    background-color: color.$green;
+    padding: 5px 10px;
+  }
+  p {
+    line-height: 16px;
+    margin-top: 15px;
+    font-size: 14px;
+    display: -webkit-box;
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+  a:hover {
+    @extend %hover;
+  }
+}

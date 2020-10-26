@@ -1,0 +1,42 @@
+@use "../utility/reset";
+@use "../utility/grid";
+.featured_works {
+  @include grid.pad-lg {
+    position: relative;
+  }
+}
+.featured_works_lg {
+  @include grid.pad-lg {
+    display: none;
+  }
+}
+
+.featured_works_xs {
+  display: none;
+  @include grid.pad-lg {
+    position: static;
+    display: block;
+    margin: 0 -10px;
+  }
+}
+.carousel_xs_btn {
+  width: 30px;
+  position: absolute;
+  top: 2px;
+  right: 30px;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  @include grid.pad-lg {
+    display: inline-block;
+  }
+}
+
+.featured_works_xs_img {
+  display: flex;
+  flex-wrap: nowrap;
+  img {
+    width: 25%;
+    padding: 0 10px;
+  }
+}

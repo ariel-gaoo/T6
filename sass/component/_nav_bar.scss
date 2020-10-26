@@ -1,0 +1,111 @@
+@use "../utility/reset";
+@use "../utility/grid";
+@use "../module/color";
+@use "../module/font";
+
+.nav_bar_wrap {
+  margin-top: 20px;
+  text-align: center;
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    &_wrap {
+      @include grid.pad-lg {
+        flex: 3 1 0;
+      }
+      flex: 1 1 0;
+      label {
+        @include grid.pad-lg {
+          display: none;
+        }
+        display: block;
+        margin: 0;
+        font-size: 32px;
+        background-color: #ffffff;
+      }
+      input {
+        display: none;
+      }
+    }
+
+    .search_wrap {
+      @include grid.pad-lg {
+        flex: 1 1 0;
+      }
+      padding: 10px 20px;
+      margin-left: 10px;
+      background-color: #ffffff;
+      flex: 3 1 0;
+      input {
+        width: 100%;
+        border: solid 1px #eaeaea;
+        background: #f3f3f3 url(../images/search.png) no-repeat right 8px bottom
+          3px;
+      }
+    }
+  }
+}
+
+#burger:checked + ul {
+  display: block;
+}
+.dropdown {
+  display: inline-block;
+  &_menu {
+    display: none;
+    background-color: #f9f9f9;
+    @include grid.pad-lg {
+      position: absolute;
+      z-index: 2;
+      width: 100%;
+    }
+  }
+  &:hover &_menu {
+    display: flex;
+    flex-direction: column;
+    border-right: none;
+    li {
+      @include grid.pad-lg {
+        position: relative;
+      }
+    }
+  }
+}
+
+.menu_item {
+  @include grid.pad-lg {
+    position: static;
+    display: flex;
+  }
+  display: none;
+  padding: 0;
+  background-color: #ffffff;
+  position: absolute;
+  z-index: 1000;
+  li,
+  ul {
+    list-style: none;
+    @include grid.pad-lg {
+      border-right: solid 1px #f7f7f7;
+    }
+  }
+  ul {
+    @include grid.pad-lg {
+      width: fit-content;
+    }
+    width: 100%;
+  }
+  a {
+    color: color.$gray;
+    font-size: font.$header_font_size;
+    display: inline-block;
+    padding: 15px;
+    width: 100%;
+    &:hover {
+      color: color.$light_gray0;
+      background-color: color.$green;
+      @extend %hover;
+    }
+  }
+}

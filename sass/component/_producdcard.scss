@@ -1,0 +1,66 @@
+@use "../utility/reset";
+@use "../utility/grid";
+@use "../module/color";
+@use "../module/font";
+
+.product {
+  @include grid.pad {
+    position: relative;
+    bottom: 40px;
+    z-index: 999;
+  }
+}
+
+.product_wrap {
+  @include grid.pad-lg {
+    margin-bottom: 0;
+  }
+  margin-bottom: 20px;
+}
+
+.product_item {
+  padding: 20px;
+  text-align: center;
+  height: 100%;
+  background-color: #e8e8e8;
+  &:hover {
+    background-color: color.$hover_bgc_gray;
+    h4,
+    p {
+      color: color.$light_gray;
+    }
+  }
+}
+
+h4 {
+  @include grid.pad-lg {
+    word-spacing: 10px;
+  }
+  @include grid.laptop {
+    word-spacing: 0;
+  }
+  color: color.$gray;
+  font-size: font.$h4_font_size;
+}
+
+.product_item p {
+  @include grid.pad {
+    height: 140px;
+  }
+  margin: 20px 0;
+  line-height: 17px;
+}
+
+.product_img {
+  margin: 20px 0;
+}
+
+.product_item a {
+  color: color.$gray;
+  padding: 6px 10px;
+  background-color: #cecece;
+  &:hover {
+    font-weight: bold;
+    text-decoration: none;
+  }
+}

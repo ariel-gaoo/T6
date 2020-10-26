@@ -1,0 +1,20 @@
+$black: #080404;
+$hover_bgc_gray: rgba(#636363, 0.9);
+$light_gray: #e7e7e7;
+$light_gray0: #f4f8e9;
+$gray0: #818181;
+$gray1: #555555;
+$gray: #4b4b4b;
+
+$green: #7db200;
+
+%hover {
+  color: $green;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+%boder_color {
+  color: eaeaea;
+  outline: solid 1px;
+}
