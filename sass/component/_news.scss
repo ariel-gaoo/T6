@@ -1,5 +1,5 @@
 @use "../utility/reset";
-@use "../module/color";
+@use "../theme/color";
 
 .news {
   display: flex;
@@ -19,9 +19,10 @@
   flex: 1 1 0;
   margin-left: 12px;
   time {
+    padding: 5px 10px;
+    display: inline-block;
     color: color.$light_gray0;
     background-color: color.$green;
-    padding: 5px 10px;
   }
   p {
     line-height: 16px;

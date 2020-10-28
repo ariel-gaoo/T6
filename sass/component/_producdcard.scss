@@ -1,10 +1,10 @@
 @use "../utility/reset";
-@use "../utility/grid";
-@use "../module/color";
-@use "../module/font";
+@use "../utility/breakpoints";
+@use "../theme/color";
+@use "../theme/font";
 
 .product {
-  @include grid.pad {
+  @include breakpoints.pad {
     position: relative;
     bottom: 40px;
     z-index: 999;
@@ -12,7 +12,7 @@
 }
 
 .product_wrap {
-  @include grid.pad-lg {
+  @include breakpoints.pad-lg {
     margin-bottom: 0;
   }
   margin-bottom: 20px;
@@ -24,7 +24,7 @@
   height: 100%;
   background-color: #e8e8e8;
   &:hover {
-    background-color: color.$hover_bgc_gray;
+    background-color: color.$transparent_gray;
     h4,
     p {
       color: color.$light_gray;
@@ -33,10 +33,10 @@
 }
 
 h4 {
-  @include grid.pad-lg {
+  @include breakpoints.pad-lg {
     word-spacing: 10px;
   }
-  @include grid.laptop {
+  @include breakpoints.laptop {
     word-spacing: 0;
   }
   color: color.$gray;
@@ -44,7 +44,7 @@ h4 {
 }
 
 .product_item p {
-  @include grid.pad {
+  @include breakpoints.pad {
     height: 140px;
   }
   margin: 20px 0;

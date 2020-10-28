@@ -1,11 +1,11 @@
 @use "../utility/reset";
-@use "../utility/grid";
-@use "../module/font";
-@use "../module/color";
+@use "../utility/breakpoints";
+@use "../theme/font";
+@use "../theme/color";
 .copyright {
   padding: 10px 0;
   text-align: center;
-  @include grid.pad-lg {
+  @include breakpoints.pad-lg {
     display: flex;
     justify-content: space-between;
   }
@@ -13,10 +13,10 @@
     font-size: font.$footer_font_size;
     color: color.$gray1;
     p {
-      @include grid.mobile {
+      @include breakpoints.mobile {
         display: inline-block;
       }
-      @include grid.pad-lg {
+      @include breakpoints.pad-lg {
         line-height: 34px;
       }
     }
@@ -28,24 +28,24 @@
     }
     span {
       display: none;
-      @include grid.mobile {
+      @include breakpoints.mobile {
         display: inline-block;
       }
     }
   }
   .copyright_media {
-    @include grid.pad {
+    @include breakpoints.pad {
       order: 2;
       flex-direction: row;
       justify-content: center;
     }
-    @include grid.pad-lg {
+    @include breakpoints.pad-lg {
       align-items: center;
     }
     display: flex;
     flex-direction: column;
     a {
-      @include grid.pad {
+      @include breakpoints.pad {
         padding: 0 5px;
       }
       @extend %hover;
@@ -60,7 +60,7 @@
 }
 
 .copyright_media a:not(:last-child) {
-  @include grid.pad {
+  @include breakpoints.pad {
     border-right: solid 1px;
   }
 }

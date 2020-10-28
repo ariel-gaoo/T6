@@ -1,18 +1,15 @@
 @use "../utility/reset";
-@use "../utility/grid";
-@use "../module/font";
-@use "../module/color";
-@use "../component/testimonials";
-@use "../component/get_in_touch";
-@use "../component/flickr";
-@use "../component/copyright";
+@use "../utility/breakpoints";
+@use "../theme/font";
+@use "../theme/color";
+
 .footer_wrap {
   margin-top: 40px;
   padding: 20px 40px;
   background-image: url(../images/subbg.gif);
 }
 .footer_item {
-  @include grid.pad-lg {
+  @include breakpoints.pad-lg {
     margin-bottom: 0;
   }
   margin-bottom: 20px;

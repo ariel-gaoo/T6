@@ -1,7 +1,7 @@
-@use "../module/color";
+@use "../theme/color";
 @use "../utility/reset";
-@use "../utility/grid";
-@use "../module/font";
+@use "../utility/breakpoints";
+@use "../theme/font";
 
 .name,
 .email,

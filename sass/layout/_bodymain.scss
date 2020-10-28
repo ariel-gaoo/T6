@@ -1,12 +1,7 @@
 @use "../utility/reset";
-@use "../utility/grid";
-@use "../module/color";
-@use "../module/font";
-@use "../component/carousel";
-@use "../component/producdcard";
-@use "../component/why_choose_us";
-@use "../component/news";
-@use "../component/features_works";
+@use "../utility/breakpoints";
+@use "../theme/color";
+@use "../theme/font";
 
 .main_wrap {
   padding: 20px 40px 60px;
@@ -18,7 +13,7 @@ h2 {
 }
 .service_wrap {
   margin-bottom: 20px;
-  @include grid.pad-lg {
+  @include breakpoints.pad-lg {
     margin-bottom: 0;
   }
 }

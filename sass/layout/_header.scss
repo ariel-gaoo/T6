@@ -1,13 +1,13 @@
 @use "../utility/reset";
-@use "../utility/grid";
-@use "../module/font";
-@use "../module/color";
-@use "../component/nav_bar";
+@use "../utility/breakpoints";
+@use "../theme/font";
+@use "../theme/color";
+
 header {
   padding-top: 10px;
 }
 .logo_wrap {
-  @include grid.pad {
+  @include breakpoints.pad {
     display: flex;
     justify-content: space-between;
     text-align: end;
@@ -18,7 +18,7 @@ header {
   text-align: center;
   background-image: url(../images/subbg.gif);
   .logo_img {
-    @include grid.pad {
+    @include breakpoints.pad {
       margin-bottom: 0;
     }
     margin-bottom: 20px;
@@ -50,7 +50,6 @@ a:hover {
   a {
     display: inline-block;
     padding: 14px;
-    font-size: 0;
     background-image: url(../images/social.png);
     background-size: 180px;
   }

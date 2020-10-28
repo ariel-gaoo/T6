@@ -1,19 +1,19 @@
 @use "../utility/reset";
-@use "../utility/grid";
+@use "../utility/breakpoints";
 .featured_works {
-  @include grid.pad-lg {
+  @include breakpoints.pad-lg {
     position: relative;
   }
 }
 .featured_works_lg {
-  @include grid.pad-lg {
+  @include breakpoints.pad-lg {
     display: none;
   }
 }
 
 .featured_works_xs {
   display: none;
-  @include grid.pad-lg {
+  @include breakpoints.pad-lg {
     position: static;
     display: block;
     margin: 0 -10px;
@@ -27,7 +27,7 @@
 }
 .carousel-control-prev,
 .carousel-control-next {
-  @include grid.pad-lg {
+  @include breakpoints.pad-lg {
     display: inline-block;
   }
 }
