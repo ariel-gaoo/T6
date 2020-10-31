@@ -24,9 +24,6 @@ nav {
         font-size: 32px;
         background-color: #ffffff;
       }
-      input {
-        display: none;
-      }
     }
 
     .search_wrap {
@@ -40,19 +37,22 @@ nav {
       input {
         width: 100%;
         border: solid 1px #eaeaea;
-        background: #f3f3f3 url(../images/search.png) no-repeat right 8px bottom
-          3px;
+        background: #f3f3f3 url(../images/search.png) no-repeat right 8px bottom 3px;
       }
     }
   }
 }
 
-#burger:checked + ul {
-  display: block;
-  @include breakpoints.pad-lg {
-    display: flex;
+#burger {
+  display: none;
+  &:checked ~ header [for="burger"] + ul {
+    display: block;
+    @include breakpoints.pad-lg {
+      display: flex;
+    }
   }
 }
+
 .dropdown {
   display: inline-block;
   &_menu {
