@@ -3,6 +3,12 @@
   .carousel-control-next-icon {
     display: none;
   }
+
+  .carousel-item img {
+    min-width: 300px;
+    min-height: 200px;
+  }
+
   .carousel-control-prev {
     height: 116px;
     width: 40px;
@@ -25,9 +31,4 @@
       background-position: bottom 0 left 0;
     }
   }
-}
-
-.carousel-item img {
-  min-width: 300px;
-  min-height: 200px;
 }
