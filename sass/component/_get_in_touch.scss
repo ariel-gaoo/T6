@@ -22,8 +22,10 @@
   padding: 5px 10px;
   border: none;
   color: color.$light_gray0;
+}
+.submit {
+  background-color: color.$green;
+}
+.reset {
   background-color: color.$black;
-  &:hover {
-    background-color: color.$green;
-  }
 }

@@ -41,49 +41,45 @@ header {
   }
 }
 
-a:hover {
-  color: color.$green;
-}
-
 .header_social_media {
   margin-bottom: 5px;
   a {
     display: inline-block;
     padding: 14px;
     background-image: url(../images/social.png);
-    background-size: 180px;
+    background-size: 185px;
   }
   a:not(:first-child) {
-    margin-left: 10px;
+    margin-left: 6px;
   }
   :nth-child(1) {
-    background-position: left 0;
+    background-position: left 0px top -1px;
     &:hover {
       background-position: left 0 bottom 1px;
     }
   }
   :nth-child(2) {
-    background-position: left -37px top 0;
+    background-position: left -39px top 0;
     &:hover {
-      background-position: left -38px bottom 0;
+      background-position: left -39px bottom 0;
     }
   }
   :nth-child(3) {
-    background-position: left -75px top 0;
+    background-position: left -77.5px top 0px;
     &:hover {
-      background-position: left -75px bottom 0;
+      background-position: left -77.5px bottom 0;
     }
   }
   :nth-child(4) {
-    background-position: right -40px top 0;
+    background-position: right -41px top 0;
     &:hover {
-      background-position: right -40px bottom 0px;
+      background-position: right -41px bottom 0px;
     }
   }
   :nth-child(5) {
     background-position: right 0 top 0;
     &:hover {
-      background-position: right -1px bottom 0px;
+      background-position: right 0 bottom 0;
     }
   }
 }
