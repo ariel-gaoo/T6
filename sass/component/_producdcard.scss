@@ -7,21 +7,23 @@
   @include breakpoints.pad {
     position: relative;
     bottom: 40px;
-    z-index: 999;
   }
-}
-
-.product_wrap {
-  @include breakpoints.pad-lg {
-    margin-bottom: 0;
+  align-items: stretch;
+  &_wrap {
+    @include breakpoints.pad-lg {
+      margin-bottom: 0;
+    }
+    margin-bottom: 20px;
   }
-  margin-bottom: 20px;
 }
 
 .product_item {
-  padding: 20px;
-  text-align: center;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 25px 15px;
+  text-align: center;
   background-color: #e8e8e8;
   &:hover {
     background-color: color.$transparent_gray;
@@ -44,20 +46,19 @@ h4 {
 }
 
 .product_item p {
-  @include breakpoints.pad {
-    height: 140px;
-  }
-  margin: 20px 0;
+  margin-top: 0;
+  margin-bottom: 1rem;
   line-height: 17px;
 }
 
 .product_img {
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 .product_item a {
   color: color.$gray;
   padding: 6px 10px;
+  margin-top: auto;
   background-color: #cecece;
   &:hover {
     font-weight: bold;
